@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #706fd3;
+  display: grid;
+  place-items: center;
+}
+.container {
+  background-color: white;
+  padding: 15px;
+  min-width: 40%;
+  border-radius: 8px;
+  display: block;
+}
+
+.row{
+  display: flex;
+  gap: 20px;
+}
+
+.row input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+}
+input:focus {
+  outline: 2px solid #706fd3;
+  border-radius: 5px;
+}
+.row button {
+  padding: 16px;
+  background-color: #706fd3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  transition: linear 0.5s;
+}
+
+button:active{
+    transform: scale(0.90);
+}
+
+.task-item{
+  padding: 10px;
+  border-bottom: 2px solid lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.task-item .delete-btn{
+  border: none;
+  padding: 16px;
+  color:#706fd3;
+  background: lightgray;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .row button{
+        width: 100%;
+    }
+}
+
